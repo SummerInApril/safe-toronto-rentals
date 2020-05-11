@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block title %}
+    EXPLORE TORONTO
+{% endblock %}
+
+{% block main %}
+
+
+        <!-- Fill viewport -->
+        <div class="container-fluid">
+
+            <!-- https://developers.google.com/maps/documentation/javascript/tutorial -->
+            <div id="map-canvas"></div>
+
+            <!-- http://getbootstrap.com/css/#forms -->
+            <form id="form">
+                <div class="form-group">
+                    <label class="sr-only" for="q">City, State, Postal Code</label>
+                    <input class="form-control" id="q" placeholder="Year, Cause of Death" type="text"/>
+                </div>
+            </form>
+                <div id="floating-panel">
+                      <button id="toggleHeatmap" name="toggleHeatmap" onclick="toggle()"> Heatmap</button>
+                      <button id="displayHomicide" onclick="displayHomicide()"> Display Homicide</button>
+                                <select id="selectyear" onchange="year()">
+                                <option value="0">Select Year:</option>
+                                <option value="1">2004</option>
+                                <option value="2">2005</option>
+                                <option value="3">2006</option>
+                                <option value="4">2007</option>
+                                <option value="5">2008</option>
+                                <option value="6">2009</option>
+                                <option value="7">2010</option>
+                                <option value="8">2011</option>
+                                <option value="9">2012</option>
+                                <option value="10">2013</option>
+                                <option value="11">2014</option>
+                              </select>
+
+                    </div>
+                </div>
+        </div>
+
+ {% endblock %}
